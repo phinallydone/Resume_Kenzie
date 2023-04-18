@@ -1,0 +1,282 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,letter,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+%\input{pubs-num.cfg}
+
+
+\begin{document}
+\name{MacKenzie L. Hunt}
+\tagline{Student - Biomedical Sciences}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{DNA}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{MacKenzie.Hunt@colostate.edu}
+  \phone{(303) 512-3028}
+  \mailaddress{5022 Kimberly Place, Longmont, CO 80503}
+  %\location{Longmont, CO}
+  %\homepage{www.homepage.com}
+  %\twitter{@twitterhandle}
+  %\linkedin{your_id}
+  %\github{your_id}
+  %\orcid{0000-0000-0000-0000}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.65}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Work Experience}
+
+\cvevent{Principles of Physiology Lab Teaching Assistant (BMS302)}{Colorado State University}{January 2023 -- Ongoing}{Fort Collins, CO}
+\begin{itemize}
+\item Introduce students to each experiment and answer questions
+\item Actively provide assistance to students as they conduct work in the lab
+\item Supervise one 2.5 hour laboratory period each week
+\item Provide feedback to the course instructor as requested
+\item Maintain a clean and orderly laboratory environment to make sure the laboratory space is ready for the next class
+\item Participate in weekly lab TA meetings to prepare and facilitate a pre-lab work
+\end{itemize}
+
+\divider
+
+\cvevent{Crew Member / Trainer (Summers)}{Cold Stone Creamery}{May 2021 -- Ongoing}{Longmont, CO}
+\begin{itemize}
+\item Greet customers to make them feel comfortable and welcome
+\item Serve customers’ in a courteous and timely manner and handle cash and credit transactions
+\item Maintain cleanliness and organization throughout the shop and ensure proper set up and/or breakdown of the entire shop including queue, restrooms, scooper and prep areas
+\item Effectively handle customer concerns and complaints
+\item Train new staff on general job duties including opening and closing the store
+\end{itemize}
+
+\divider
+
+\cvevent{Assistant Softball Coach}{Niwot Youth Sports}{May 2022 -- July 2022}{Niwot, CO}
+\begin{itemize}
+\item Assist head coach with the development, coordination and implementation of practice plans, strategies and coaching techniques  
+\item Teach young athletes the game of softball and fundamental softball skills
+\item Provide support and encouragement to young athletes
+\end{itemize}
+
+\divider
+
+\cvevent{Cabana Attendant}{The Fox Hill Club}{May 2019 -- August 2019}{Longmont, CO}
+\begin{itemize}
+\item Setup of pool service, cleaning of cabanas, laundering and setup of towels at poolside and overall appearance and cleanliness of pool area
+%\item Manage daily check-in, ensuring pool access to members and guests
+\item Ensure a safe environment for all members, guests and staff
+\end{itemize}
+
+% \cvsection{Projects}
+
+% \cvevent{Project 1}{Funding agency/institution}{}{}
+% \begin{itemize}
+% \item Details
+% \end{itemize}
+
+% \divider
+
+% \cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+% A short abstract would also work.
+
+% \medskip
+
+% \cvsection{A Day of My Life}
+
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+
+\cvevent{B.S.\ in Biomedical Sciences}{Colorado State University}{August 2021 -- May 2025 (Expected)}{}
+GPA: 3.548
+
+\divider
+
+\cvevent{High School Diploma}{Silver Creek High School}{August 2017 -- May 2021}{}
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working}
+\cvtag{Curious}\\
+\cvtag{Energetic}
+\cvtag{Team player}\\
+\cvtag{Mechanically oriented}\\
+\cvtag{Systemic thinker}
+\cvtag{Eager to learn}
+
+\divider\smallskip
+
+\cvtag{Biology}
+\cvtag{Chemistry}
+\cvtag{Statistics}
+\cvtag{Genetics}
+\cvtag{Lab work}
+\cvtag{Systems}
+
+\medskip
+
+% \cvsection{Most Proud of}
+
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+
+% \cvsection{Languages}
+
+% \cvskill{English}{5}
+% \divider
+
+% \cvskill{Spanish}{4}
+% \divider
+
+% \cvskill{German}{3.5} %% Supports X.5 values.
+
+% %% Yeah I didn't spend too much time making all the
+% %% spacing consistent... sorry. Use \smallskip, \medskip,
+% %% \bigskip, \vspace etc to make adjustments.
+% \medskip
+
+
+\cvsection{References}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Asst. Prof.\ Ryan Maresh}{Colorado State University}{ryan.maresh@colostate.edu}{(555) 555-5555}
+%{Address Line 1\\Address line 2}
+
+\divider
+
+\cvref{Ryan Beavers}{Coach Silver Creek Softball}{rbeavers@us.ibm.com }{(303) 924-8621}
+%{Address Line 1\\Address line 2}
+
+\divider
+
+\cvref{Ryan Beavers}{Coach Silver Creek Softball}{rbeavers@us.ibm.com }{(303)  924-8621}
+%{Address Line 1\\Address line 2}
+
+\end{paracol}
+
+
+\end{document}
